@@ -25,6 +25,23 @@
             else
                 window.open("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.6491212275987!2d13.00942271566027!3d55.60812008051492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a3e492268cb5%3A0xeee36a22be8f74a5!2s%C3%96stra%20Tullgatan%205%2C%20211%2028%20Malm%C3%B6!5e0!3m2!1ssv!2sse!4v1677591690094!5m2!1ssv!2sse");
         }
+
+    function imgChange(number) {
+        switch (number) {
+            case 1:
+                document.getElementById('currentImg').src = "../img/img002-414.jpg";
+                document.getElementById('currentSource').srcset = "../img/img002-600.jpg";
+                break;
+            case 2:
+                document.getElementById('currentImg').src = "../img/img003-414.jpg";
+                document.getElementById('currentSource').srcset = "../img/img003-600.jpg";
+                break;
+            default:
+                document.getElementById('currentImg').src = "../img/img001-414.jpg";
+                document.getElementById('currentSource').srcset = "../img/img001-600.jpg";
+                break;
+        }
+    }
     </script>
 
     <div class="body-flexbox">
@@ -55,22 +72,22 @@
             <div class="left">
                 <div class="small-head-img">
                     <picture>
-                        <source srcset="../img/img001-600.jpg" media="(min-width: 600px)">
-                        <a href="#"><img src="../img/img001-414.jpg" alt="Booking image"></a>
+                        <source id="currentSource" srcset="../img/img001-600.jpg" media="(min-width: 600px)">
+                        <a href="#"><img id="currentImg" src="../img/img001-414.jpg" alt="Booking image"></a>
                     </picture>
                 </div>
                 <div class="small-imgs">
                     <picture>
                         <source srcset="../img/img001-600.jpg" media="(min-width: 414px)">
-                        <a href="#"><img src="../img/img001-414.jpg" alt="Booking image"></a>
+                        <a href="#"><img src="../img/img001-414.jpg" alt="Booking image" onclick="imgChange(1)"></a>
                     </picture>
                     <picture>
-                        <source srcset="../img/img001-600.jpg" media="(min-width: 600px)">
-                        <a href="#"><img src="../img/img002-414.jpg" alt="Booking image"></a>
+                        <source srcset="../img/img002-600.jpg" media="(min-width: 600px)">
+                        <a href="#"><img src="../img/img002-414.jpg" alt="Booking image" onclick="imgChange(2)"></a>
                     </picture>
                     <picture>
-                        <source srcset="../img/img001-600.jpg" media="(min-width: 600px)">
-                        <a href="#"><img src="../img/img003-414.jpg" alt="Booking image"></a>
+                        <source srcset="../img/img003-600.jpg" media="(min-width: 600px)">
+                        <a href="#"><img src="../img/img003-414.jpg" alt="Booking image" onclick="imgChange(3)"></a>
                     </picture>
                 </div>
             </div>
