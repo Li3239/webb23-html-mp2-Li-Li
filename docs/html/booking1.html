@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,23 +26,27 @@
             else
                 window.open("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.6491212275987!2d13.00942271566027!3d55.60812008051492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a3e492268cb5%3A0xeee36a22be8f74a5!2s%C3%96stra%20Tullgatan%205%2C%20211%2028%20Malm%C3%B6!5e0!3m2!1ssv!2sse!4v1677591690094!5m2!1ssv!2sse");
         }
-
-    function imgChange(number) {
-        switch (number) {
-            case 1:
-                document.getElementById('currentImg').src = "../img/img002-414.jpg";
-                document.getElementById('currentSource').srcset = "../img/img002-600.jpg";
-                break;
-            case 2:
-                document.getElementById('currentImg').src = "../img/img003-414.jpg";
-                document.getElementById('currentSource').srcset = "../img/img003-600.jpg";
-                break;
-            default:
-                document.getElementById('currentImg').src = "../img/img001-414.jpg";
-                document.getElementById('currentSource').srcset = "../img/img001-600.jpg";
-                break;
+        // to change img by clicking small imgs
+        function imgChange(number) {
+            switch (number) {
+                case 1:
+                    document.getElementById('currentImg').src = "../img/img001-414.jpg";
+                    document.getElementById('currentSource').srcset = "../img/img001-600.jpg";
+                    break;
+                case 2:
+                    document.getElementById('currentImg').src = "../img/img002-414.jpg";
+                    document.getElementById('currentSource').srcset = "../img/img002-600.jpg";
+                    break;
+                default:
+                    document.getElementById('currentImg').src = "../img/img003-414.jpg";
+                    document.getElementById('currentSource').srcset = "../img/img003-600.jpg";
+                    break;
+            }
         }
-    }
+
+        function btnNext() {
+            window.location.href = './booking2.html';
+        }
     </script>
 
     <div class="body-flexbox">
@@ -63,7 +68,7 @@
                 <ul>
                     <li class="active"><a href="../index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
-                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="booking1.html">Booking</a></li>
                 </ul>
             </div>
         </nav>
@@ -91,6 +96,7 @@
                     </picture>
                 </div>
             </div>
+
             <div class="right">
                 <div class="book-a-table">
                     <h1> Book a Table</h1>
@@ -110,96 +116,40 @@
 
                 <div class="title">
                     <span class="material-symbols-outlined">
-                        calendar_month
+                        badge
                     </span>
-                    <p> Date&Time</p>
-                </div>
-                <div class="calendar">
-                    <div class="month">
-                        <ul>
-                            <li class="prev">&#10094;</li>
-                            <li class="next">&#10095;</li>
-                            <li>March<br><span style="font-size:18px">2023</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <ul class="weekdays">
-                        <li>Mo</li>
-                        <li>Tu</li>
-                        <li>We</li>
-                        <li>Th</li>
-                        <li>Fr</li>
-                        <li>Sa</li>
-                        <li>Su</li>
-                    </ul>
-                    
-                    <ul class="days">
-                        <li>27</li>
-                        <li>28</li>
-                        <li>1</li>
-                        <li>2</li>
-                        <li><span class="active">3</span></li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
-                        <li>9</li>
-                        <li>10</li>
-                        <li>11</li>
-                        <li>12</li>
-                        <li>13</li>
-                        <li>14</li>
-                        <li>15</li>
-                        <li>16</li>
-                        <li>17</li>
-                        <li>18</li>
-                        <li>19</li>
-                        <li>20</li>
-                        <li>21</li>
-                        <li>22</li>
-                        <li>23</li>
-                        <li>24</li>
-                        <li>25</li>
-                        <li>26</li>
-                        <li>27</li>
-                        <li>28</li>
-                        <li>29</li>
-                        <li>30</li>
-                        <li>31</li>
-                    </ul>
+                    <p> Name</p>
                 </div>
 
-                <div class="times">
-                    <button class="selected" type="button">12:00 am</button>
-                    <button type="button">5:30 pm</button>
-                    <button type="button">8:00 pm</button>
+                <div class="user-input">
+                    <input id="firstName" type="text" placeholder="First Name">
+                    <input id="lastName" type="text" placeholder="Last Name">
                 </div>
 
                 <div class="title">
                     <span class="material-symbols-outlined">
-                        supervisor_account
+                        call
                     </span>
-                    <p> Guests</p>
+                    <p> Tel</p>
                 </div>
 
-                <div class="guests">
-                    <div class="minus-box">
-                        <span class="material-symbols-outlined">
-                            remove
-                        </span>
-                    </div>
-                    <div class="total-guest-number">2 Guests</div>
-                    <div class="plus-box selected">
-                        <span class="material-symbols-outlined">
-                            add
-                        </span>
-                    </div>
+                <div class="user-input">
+                    <input id="Telephone" type="text" placeholder="Telephone">
+                </div>
+
+                <div class="title">
+                    <span class="material-symbols-outlined">
+                        mail
+                    </span>
+                    <p> Email</p>
+                </div>
+
+                <div class="user-input">
+                    <input id="Email" type="text" placeholder="Email">
                 </div>
 
                 <div class="confirm">
-                    <button type="button">Confirm</button>
+                    <button type="button" onclick="btnNext()">Next</button>
                 </div>
             </div>
         </main>
@@ -214,7 +164,7 @@
                 <div class="line-in-grid">
                     <span class="material-symbols-outlined">domain_add</span>
                     <p><a style="cursor: pointer;" onclick="myNavFunc()">Östra Tullgatan 5, 211 28 Malmö</a></p>
-                    </div>
+                </div>
                 <div class="line-in-grid">
                     <span class="material-symbols-outlined">mail</span>
                     <p><a class="footer-tel-mail" href="mailto:amy.cai.j@hotmail.com">amy.cai.j@hotmail.com</a></p>
@@ -226,7 +176,7 @@
                 <div class="line-in-grid">
                     <a target="_blank" title="Facebook" href="https://www.facebook.com/open.rice.restaurang/?locale=sv_SE"><img src="../icon/facebook-48_48.png" alt="Facebook" width="30px" height="30px"></a>
                     <a target="_blank" title="Reviews" href="https://www.facebook.com/open.rice.restaurang/reviews?locale=sv_SE"><img src="../icon/greenstar_128-128.png" alt="Reviews" width="30px" height="30px"></a>
-                    </div>
+                </div>
             </div>
             <div class="footer-grid-item">
                 <h2>Open times</h2>

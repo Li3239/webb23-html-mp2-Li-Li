@@ -3,27 +3,31 @@
     --main-background-color: black;
     /* selected button background color */
     --active-background-color: #1abc9c;
-    /* main font */
-    --main-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    --main-font-color: rgb(8, 8, 8);
-    --welcome-font-family: cursive;
-    /* Navigationbar & footer text color */
-    --header-footer-font-color: rgb(208, 208, 208);
-    /* second font color for colorful background items */
-    --sub-font-color: white;
     /* product animation color changes */
     --product-hover-background-color: rgb(249, 216, 175);
-    /* box shadow setting for all need in site*/
-    --main-box-shadow: 2px 2px 10px 1px rgb(124, 120, 120);
+
+    /* main font */
+    --main-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --welcome-font-family: cursive;
+
+    --main-font-color: rgb(8, 8, 8);
+    /* second font color for colorful background items */
+    --sub-font-color: white;
+    /* Navigationbar & footer text color */
+    --header-footer-font-color: rgb(208, 208, 208);
     /* navigation link hover color chang */
     --link-hover-color: rgb(232, 23, 89);
+
+    /* box shadow setting for all need in site*/
+    --main-box-shadow: 2px 2px 10px 1px rgb(124, 120, 120);
 
     /* normal font setting */
     --main-font-size: 1.2vw;
     /* navigation bar link font */
-    --nav-font-size: 3vw;
+    --nav-font-size: 2vw;
     /* sets font size for buttons */
     --button-text-font-size: 2vw;
+
     /* padding */
     --small-padding: 1vh;
 }
@@ -473,6 +477,7 @@ div.right .book-a-table {
     justify-content: center;
     text-align: center;
     background-color: var(--active-background-color);
+    font-size: var(--nav-font-size);
     color: white;
 }
 
@@ -486,6 +491,15 @@ div.right .title {
 div.right .calendar {
     width: 90%;
     height: 20%;
+}
+
+.user-input {
+    width: 90%;
+    height: 5vh;
+    display: flex;
+    justify-content: stretch;
+    gap: 2rem;
+    margin: 1rem 0;
 }
 
 .times {
@@ -636,9 +650,10 @@ div.right .calendar {
         height: 10vw;
     }
 
-    div.rounded {
-        width: 10vw;
-        height: 10vw;
+    /* round box */
+    div.rounded, div.rounded-active {
+        width: 8vw;
+        height: 8vw;
     }
 
     div.left {
