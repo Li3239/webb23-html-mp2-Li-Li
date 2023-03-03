@@ -21,7 +21,7 @@
     /* normal font setting */
     --main-font-size: 1.2vw;
     /* navigation bar link font */
-    --nav-font-size: 1.5vw;
+    --nav-font-size: 3vw;
     /* sets font size for buttons */
     --button-text-font-size: 2vw;
     /* padding */
@@ -55,7 +55,7 @@ h1 {
 /**********************
     description block
  **********************/
-.book-table {
+.booking-table {
     width: 100%;
     height: 85vh;
     /* overflow: hidden; */
@@ -63,10 +63,12 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    vertical-align: calc();
+    margin-bottom: 2vh;
 }
 
 /* fuzzy img with clear text on it */
-.book-table::after {
+.booking-table::after {
     width: 100%;
     height: 100%;
     top: 0;
@@ -76,7 +78,7 @@ h1 {
     content: '';
     position: absolute;
     background: transparent url('../img/bkground1-600.jpg') center center no-repeat;
-    filter: blur(8px);
+    filter: blur(4px);
     /*图片置于最后端*/
     z-index: -1;
     /*图片不论大小全屏铺开*/
@@ -84,15 +86,15 @@ h1 {
 }
 
 /* in "Book a table" button area */
-.book-table h1,
-.book-table h2 {
+.booking-table h1,
+.booking-table h2 {
     column-width: 180%;
     font-family: var(--welcome-font-family);
     font-size: var(--button-text-font-size);
 }
 
 /* "Book a table" button */
-.book-table button {
+.booking-table button {
     width: 20vw;
     height: 6vw;
     color: var(--sub-font-color);
@@ -110,7 +112,7 @@ h1 {
     vertical-align: middle;
     /*水平排列*/
     display: inline-block;
-    margin: 2rem;
+    margin: 1vw;
     padding: var(--small-padding);
     border: 2px solid rgb(3, 134, 21);
     border-radius: 2%;
@@ -179,7 +181,7 @@ p {
 }
 
 .nav-middle h1 {
-    font-size: var(--button-text-font-size);
+    font-size: var(--nav-font-size);
     color: var(--header-footer-font-color);
 }
 
@@ -569,6 +571,38 @@ div.right .calendar {
   Media queries for various screens
 *****************************************/
 
+/* For small screen: */
+@media only screen and (max-width:768px) {
+    /* main page description area */
+    div.desc {
+        width: 80%;
+    }
+
+    /* main page, "book a table" button */
+    .booking-table button {
+        width: 50vw;
+        height: 10vw;
+    }
+
+    /* navigation bar */
+    .topnav {
+        /* width: 80%; */
+        flex-direction: column;
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+
+    :root {
+        /* normal font setting */
+        --main-font-size: 5vw;
+        /* sets font size for buttons */
+        --button-text-font-size: 5vw;
+        /* navigation bar link font */
+        --nav-font-size: 6vw;
+    }
+}
+
+
 /* For mobile phones: */
 @media only screen and (max-width:414px) {
 
@@ -578,7 +612,7 @@ div.right .calendar {
     }
 
     div.desc {
-        width: 70%;
+        width: 90%;
     }
 
     div.footer-left,
@@ -590,14 +624,14 @@ div.right .calendar {
     :root {
         /* normal font setting */
         --main-font-size: 5vw;
-        /* navigation bar link font */
-        --nav-font-size: 1.5vw;
         /* sets font size for buttons */
         --button-text-font-size: 5.0vw;
+        /* navigation bar link font */
         --nav-font-size: 6vw;
     }
 
-    .book-table button {
+        /* main page, "book a table" button */
+        .booking-table button {
         width: 50vw;
         height: 10vw;
     }
@@ -612,6 +646,7 @@ div.right .calendar {
         height: 30vh;
     }
 
+    /* navigation bar */
     .topnav {
         /* width: 80%; */
         flex-direction: column;
@@ -625,12 +660,13 @@ div.right .calendar {
         /* row-gap: vw; */
     }
 
-    .book-table {
+    .booking-table {
         height: 50vh;
     }
 
-    .book-table::after {
+    .booking-table::after {
         background: transparent url('../img/bkground1-414.jpg') center center no-repeat;
+        filter: blur(2px);
     }
 
     .footer {
