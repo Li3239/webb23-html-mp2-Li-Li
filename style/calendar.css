@@ -1,4 +1,3 @@
-/* https: //www.w3schools.com/howto/tryit.asp?filename=tryhow_css_calendar */
 /* calendar setting */
 
 * {
@@ -27,7 +26,7 @@ body {
 
 .month ul li {
     color: white;
-    font-size: 20px;
+    font-size: 1.2vw;
     text-transform: uppercase;
     letter-spacing: 3px;
 }

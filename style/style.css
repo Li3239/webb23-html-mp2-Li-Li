@@ -536,13 +536,12 @@ div.right .calendar {
 
 .minus-box,
 .plus-box {
-    width: auto;
-    /* height: auto; */
-    border: 1px solid black;
+    width: 10%;
+    height: 100%;
     border-radius: 0.2rem;
     justify-content: center;
     align-items: center;
-    margin: 0 10%;
+    margin: 0 5%;
     box-shadow: var(--main-box-shadow);
 }
 
@@ -558,6 +557,7 @@ div.right .calendar {
     justify-content: center;
     align-items: center;
     font-family: var(--main-font-family);
+    font-size: var(--main-font-size);
 }
 
 .confirm {
@@ -579,6 +579,7 @@ div.right .calendar {
     background-color: var(--main-background-color);
     color: white;
     font-family: var(--main-font-family);
+    font-size: var(--nav-font-size);
 }
 
 /*****************************************
