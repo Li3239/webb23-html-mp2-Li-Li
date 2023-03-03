@@ -1,0 +1,643 @@
+:root {
+    /* main background color style */
+    --main-background-color: black;
+    /* selected button background color */
+    --active-background-color: #1abc9c;
+    /* main font */
+    --main-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    --main-font-color: rgb(8, 8, 8);
+    --welcome-font-family: cursive;
+    /* Navigationbar & footer text color */
+    --header-footer-font-color:rgb(208, 208, 208);
+    /* second font color for colorful background items */
+    --sub-font-color: white;
+    /* product animation color changes */
+    --product-hover-background-color: rgb(249, 216, 175);
+    /* box shadow setting for all need in site*/
+    --main-box-shadow: 2px 2px 10px 1px rgb(124, 120, 120);
+    /* navigation link hover color chang */
+    --link-hover-color: rgb(232, 23, 89);
+
+    /* normal font setting */
+    --main-font-size: 1.2vw;
+    /* navigation bar link font */
+    --nav-font-size: 1.5vw;
+    /* sets font size for buttons */
+    --button-text-font-size: 2vw;
+}
+
+* {
+    margin: 0;
+    font-size: var(--main-font-size);
+}
+
+h1 {
+    width: auto;
+    font-family:var(--main-font-family);
+}
+
+.head-img {
+    width: 100%;
+    height: 50%vh;
+    overflow: hidden;
+}
+
+.body-flexbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/**********************
+    description block
+ **********************/
+.book-table {
+    width: 100%;
+    height: 85vh;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* fuzzy img with clear text on it */
+.book-table::after {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-bottom: 1rem;
+    /* 没有content设定时图片不显示 */
+    content: '';
+    position: absolute;
+    background: transparent url('/img/bkground1-600.jpg') center center no-repeat;
+    filter: blur(8px);
+    /*图片置于最后端*/
+    z-index: -1;
+    /*图片不论大小全屏铺开*/
+    background-size: cover;
+}
+
+/* in "Book a table" button area */
+.book-table h1, .book-table h2 {
+    column-width: 180%;
+    font-family: var(--welcome-font-family);
+    font-size: var(--button-text-font-size);
+}
+
+/* "Book a table" button */
+.book-table button {
+    width: 20vw;
+    height: 6vw; 
+    color: var(--sub-font-color);
+    font-family: var(--main-font-family);
+    font-size: var(--button-text-font-size);
+    background-color: var(--link-hover-color);
+    border-radius: 10rem;
+    box-shadow: var(--main-box-shadow);
+}
+
+.desc {
+    width: 40%;
+    justify-content: space-around;
+    /*纵向居中*/
+    vertical-align: middle;
+    /*水平排列*/
+    display: inline-block;
+    margin: 2rem;
+    padding: 1rem;
+    border: 2px solid rgb(3, 134, 21);
+    border-radius: 2%;
+}
+
+.desc-img {
+    width: 100%;
+    height: 50%vh;
+    overflow: hidden;
+}
+
+.villkor {
+    width: auto;
+    height: auto;
+    justify-content: left;
+    /*纵向居中*/
+    vertical-align: middle;
+    /*水平排列*/
+    display: inline-block;
+}
+
+a p {
+    text-decoration: underline;
+}
+
+p {
+    /*增大文字段落的行间距*/
+    line-height: 200%; 
+    font-family: var(--main-font-family)
+}
+
+/**********************
+    Navigation bar
+ **********************/
+ /* scroll line */
+ .scroll-line {
+     width: 100%;
+     height: 8%;
+     background-color: var(--link-hover-color);
+     font-size: var(--main-font-size);
+     color: var(--sub-font-color);
+     align-items: end;
+ }
+
+ /* the navigation container */
+.topnav {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-background-color);
+}
+
+/* the left area(logo) of navigation */
+.topnav.nav-left {
+    width: 30%;
+    height: 100%;
+    justify-content: left;
+}
+
+.topnav.nav-middle {
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+}
+
+.nav-middle h1 {
+    font-size: var(--button-text-font-size);
+    color: var(--header-footer-font-color);
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+.logoimg {
+    width: 64px;
+    height: 64px;
+    background-color: var(--main-background-color);
+    margin-left: 30%;
+}
+
+/* the right area(menu) of navigation */
+.nav-right {
+    width: 30%;
+    justify-content: right;
+}
+
+.nav-right ul {
+    list-style-type: none;
+    height: 10vh;
+    margin: 0px;
+    display: flex;
+    justify-content: right;
+    /* set flexbox child element horizontal center*/
+    align-items: center;
+}
+
+.nav-right li {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    display: inline;
+    font: bold;
+}
+
+.nav-right a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--header-footer-font-color);
+    font-size: var(--nav-font-size);
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+/**********************
+    Footer grid
+ **********************/
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: var(--main-background-color);
+    font-size: var(--main-font-size);
+    color: var(--header-footer-font-color);
+    grid-template-rows: 23% 23% 23% 23%;
+    grid-template-columns: 30% 30% 30%;
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+ .footer-grid-item {
+     width: 100%;
+     text-align: center;
+     font-family: var(--main-font-family);
+     /* margin: 0 auto; */
+     display: flex;
+     flex-wrap: wrap;
+     column-gap: 1rem;
+ }
+
+ /* Restaurang Name */
+ .footer-grid-item:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    justify-content: left;
+ }
+
+ /* Address */
+ .footer-grid-item:nth-child(2) {
+    grid-row-start: 1;
+    grid-column-start: 2;
+ }
+
+ /* Email */
+ .footer-grid-item:nth-child(3) {
+    grid-row-start: 2;
+    grid-column-start: 2;
+ }
+
+ /* Tel */
+ .footer-grid-item:nth-child(4) {
+    grid-row-start: 3;
+    grid-column-start: 2;
+ }
+
+/* social */
+.footer-grid-item:nth-child(5) {
+    grid-row-start: 4;
+    grid-column-start: 2;
+}
+
+ /* Open time */
+ .footer-grid-item:nth-child(6) {
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+a.footer-tel-mail {
+    color: var(--header-footer-font-color);
+}
+
+a.footer-tel-mail:hover {
+    color: var(--link-hover-color);
+}
+
+ /**********************
+    Menu list
+ **********************/
+ .menu-list-grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    align-items: center;
+    /* auto wrap */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-columns: 22% 22% 22% 22%; */
+    /* grid-template-rows: 30% 30%; */
+    row-gap: 2vh;
+    column-gap: 1vw;
+    padding-top: 1rem;
+    padding-bottom: 1vh;
+ }
+
+ .product {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rgb(28, 28, 28); */
+    box-shadow: var(--main-box-shadow);
+    overflow: hidden;
+ }
+
+.product img {
+    width: 90%;
+    height: 60%;
+    /* object-fit: cover; */
+    object-fit: contain;
+}
+
+ .price-name {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+ }
+
+ .product:hover {
+    transition-duration: 500ms;
+    margin: 0 auto;
+ }
+
+ /* @keyframes productAnimation {
+    from {
+        background-size: 100.5% 100.5%;
+    }
+    to {
+        background-size: 100% 100%;    
+    }
+ } */
+
+.product:hover {
+    background-color: var(--product-hover-background-color);
+    transform: scale(1.1);
+    transition: all 1s ease 0s;
+}
+
+.product p {
+    width: 100%;
+    height: 20%;
+}
+
+/* li.home::before {
+    content: &#127968;
+
+} */
+
+/*****************************************
+  Booking page style setting
+*****************************************/
+div.rounded, div.rounded-active {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    background-color: var(--sub-background-color);
+    border: 1px solid black;
+    box-shadow: var(--main-box-shadow);
+    /* add Number in rounded box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.rounded-active {
+    background-color: var(--active-background-color);
+}
+
+main.booking {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5%;
+}
+
+div.left {
+    width: 30%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+div.left img {
+    width: 100%;
+    /* height: 80%; */
+    margin: 2%;
+    padding: 1%;
+    /* background-size: cover; */
+    object-fit:fill;
+}
+
+/* top img line: one bigger img */
+div.small-head-img {
+    width: 90%;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+div.small-imgs {
+    width: 90%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.2%;
+    padding: 1%;
+}
+
+div.small-imgs:nth-child(1) {
+    border: 1px solid black;
+}
+
+div.small-imgs:nth-child(1) {
+    border: 1px solid black;
+}
+
+div.small-imgs:nth-child(1) {
+    border: 1px solid black;
+}
+
+div.right {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.right .rounded-number {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    /* padding-top: 1.5rem; */
+    margin: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.right .book-a-table {
+    width: 90%;
+    height: 10%;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--active-background-color);
+    color: white;
+}
+
+div.right .title {
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: left;
+}
+
+div.right .calendar {
+    width: 90%;
+    height: 20%;
+}
+
+.times {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.times button {
+    width: 25%;
+    box-shadow: var(--main-box-shadow);
+    border-radius: 0.5rem;
+    font-size: var(--button-text-font-size);
+    font-family: var(--main-font-family);
+}
+
+.selected {
+    background: var(--active-background-color);
+    color: white !important
+}
+
+.guests {
+    width: 90%;
+    height: 3rem;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.2rem;
+    background-color: var(--sub-background-color);
+}
+
+.minus-box,
+.plus-box {
+    width: auto;
+    /* height: auto; */
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10%;
+    box-shadow: var(--main-box-shadow);
+}
+
+.plus-box {
+    background-color: var(--active-background-color);
+    color: white;
+}
+
+.total-guest-number {
+    width: auto;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-font-family);
+}
+
+.confirm {
+    width: 100%;
+    height: 3rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm button {
+    width: 90%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--main-box-shadow);
+    border-radius: 3rem;
+    background-color: var(--main-background-color);
+    color: white;
+    font-family: var(--main-font-family);
+}
+
+/*****************************************
+  Media queries for various screens
+*****************************************/
+
+/* For mobile phones: */
+@media only screen and (max-width:414px) {
+    div.topnav.nav-left,
+    div.topnav.nav-right {
+        width: 100%;
+    }
+
+    div.desc {
+        width: 70%;
+    }
+
+    div.footer-left,
+    div.footer-middle,
+    div.footer-right {
+        width: 100%;
+    }
+    :root {
+        /* normal font setting */
+        --main-font-size: 5vw;
+        /* navigation bar link font */
+        --nav-font-size: 1.5vw;
+        /* sets font size for buttons */
+        --button-text-font-size: 5.0vw;
+        --nav-font-size: 6vw;
+    }
+
+    .book-table button {
+        width: 50vw;
+        height: 10vw;
+    }
+
+    div.rounded {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    div.left {
+        /* width: 30%; */
+        height: 30vh;
+    }
+
+    .topnav {
+        /* width: 80%; */
+        flex-direction: column;
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: space-around;
+        /* row-gap: vw; */
+    }
+
+    .book-table {
+        height: 50vh;
+    }
+
+    .book-table::after {
+        background: transparent url('/img/bkground1-414.jpg') center center no-repeat;
+    }
+}

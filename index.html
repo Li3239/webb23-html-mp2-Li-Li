@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- google font:symbols address/mail/tel -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Open Rice</title>
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <script>
+        // open Google maps
+        function myNavFunc() {
+            // check divice type
+            if ((navigator.platform.indexOf("iPhone") != -1)
+                || (navigator.platform.indexOf("iPod") != -1)
+                || (navigator.platform.indexOf("iPad") != -1))
+                window.open("maps://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.6491212275987!2d13.00942271566027!3d55.60812008051492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a3e492268cb5%3A0xeee36a22be8f74a5!2s%C3%96stra%20Tullgatan%205%2C%20211%2028%20Malm%C3%B6!5e0!3m2!1ssv!2sse!4v1677591690094!5m2!1ssv!2sse");
+            else
+                window.open("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.6491212275987!2d13.00942271566027!3d55.60812008051492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a3e492268cb5%3A0xeee36a22be8f74a5!2s%C3%96stra%20Tullgatan%205%2C%20211%2028%20Malm%C3%B6!5e0!3m2!1ssv!2sse!4v1677591690094!5m2!1ssv!2sse");
+        }
+
+        function fncBooking() {
+            window.location.href = '/html/booking.html';
+        }
+    </script>
+
+    <div class="body-flexbox">
+        <div class="scroll-line">
+            <marquee>Ny kund? 25% rabatt på första köpet | Använd kod: NY25</marquee>
+        </div>
+        <nav class="topnav">
+            <div class="nav-left">
+                <picture >
+                    <a href="/index.html"><img class="logoimg" src="/img/logo-48_48.png" alt="Open Rice Logo"></a>
+                </picture>
+            </div>
+            <div class="nav-middle">
+                <a href="/index.html"><h1>Open Rice</h1></a>
+            </div>
+            <div class="nav-right">
+                <ul>
+                    <li class="active"><a href="/index.html">Home</a></li>
+                    <li><a href="/html/menu.html">Menu</a></li>
+                    <li><a href="/html/booking.html">Booking</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <!-- <div class="top-img" style="position: relative;"> -->
+            <!-- <div class="top-img"> -->
+                <!-- <picture>
+                    <source srcset="./img/bkground1-middle-450.jpg" media="(min-width: 450px)">
+                    <source srcset="./img/bkground1-large-800.jpg" media="(min-width: 800px)">
+                    <img class="head-img" src="./img/bkground1-small.jpg" alt="Open Rice background image">
+                </picture> -->
+                <div class="book-table">
+                    <h1>Welcome to</h1>
+                    <h1>Restaurant Open Rice in Malmo</h1>
+                    <button type="button" onclick="fncBooking()">
+                        <span style="color: white; vertical-align: middle;" class="material-symbols-outlined">
+                            restaurant
+                        </span>
+                        Book a table
+                    </button>
+                </div>
+            <!-- </div> -->
+
+            <div class="desc">
+                <picture>
+                    <source srcset="/img/openrice-600.jpg" media="(min-width: 414px)">
+                    <img class="desc-img" src="/img/openrice-414.jpg" alt="Open Rice image">
+                </picture>
+            </div>
+
+            <div class="desc">
+                <p>Vår restaurang som ligger på Östra Tullgatan 5 i Malmö. Vi serverar bland annat Mixed of Siu Yuk & Char Siu, Lättöl, Äta här bara för att nämna några.
+                Här på vår hemsida kan du enkelt och snabbt beställa från vårt utbud genom mobilen eller datorn. Vi jobbar hela tiden mot att förbättra oss och vill leverera den bästa matupplevelsen till dig.</p><br>
+                <h1>Restaurang i Malmö</h1>
+                <p>Lyxa till din vardag och köp en av våra goda rätter online. Vi har maten som bjuder på en härlig upplevelse, oavsett om du äter med vänner, partnern eller helt enkelt bara själv.</p><br>
+                <p>Med vårt beställningssytem här online har du möjligheten att både lägga till och ta bort tillbehör på maten, så att du får den precis som du vill ha det. Vi har flera populära maträtter som uppskattas av våra gäster, leta runt i menyn och se om du hittar en favorit. Kanske blir du vår nästa stammis?
+                Beställ online från oss på Open Rice direkt här på hemsidan eller ring 073-788 05 26.</p><br>
+                <a target="_blank" href="https://www.lumit.se/bestallningsinformation/">
+                    <p class="villkor">Våra villkor &#9758; En tjänst från</p>
+                    <img class="villkor" src="./img/lumit-logo-22px.png" alt="Lumit image" width="30px" height="10px">
+                </a>
+            </div>
+
+
+        </main>
+
+        <div class="footer">
+            <div class="footer-grid-item footer-left">
+                <h4>&copy;2023 Open Rice Restaurang AB<br>
+                    All Rights Reserved </h4>
+                <p>Organisationsnummer: 5569992711</p>
+            </div>
+            <div class="footer-grid-item footer-middle">
+                <span class="material-symbols-outlined">domain_add</span>
+                <p><a style="cursor: pointer;" onclick="myNavFunc()">Östra Tullgatan 5, 211 28 Malmö</a></p>
+            </div>
+            <div class="footer-grid-item footer-middle">
+                <span class="material-symbols-outlined">mail</span>
+                <p><a class="footer-tel-mail" href="mailto:amy.cai.j@hotmail.com">amy.cai.j@hotmail.com</a></p>
+            </div>
+            <div class="footer-grid-item footer-middle">
+                <span class="material-symbols-outlined">call </span>
+                <p><a class="footer-tel-mail" href="tel:+73 788 05 26"> 073-788 05 26</a></p>
+            </div>
+            <div class="footer-grid-item footer-middle">
+                <a target="_blank" title="Facebook" href="https://www.facebook.com/open.rice.restaurang/?locale=sv_SE" ><img src="./icon/facebook-48_48.png" alt="Facebook" width="30px" height="30px"></a>
+                <a target="_blank" title="Reviews" href="https://www.facebook.com/open.rice.restaurang/reviews?locale=sv_SE" ><img src="./icon/greenstar_128-128.png" alt="Reviews" width="30px" height="30px"></a>
+            </div>
+            <div class="footer-grid-item footer-right">
+                <h2>Öppettider</h2>
+                <p>Måndag - Fredag 11:15 - 20:00</p>
+                <p>Lördag 13:00 - 20:00</p>
+                <p>Söndag Stängt</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
