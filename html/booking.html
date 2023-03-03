@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Openrice,open rice,malmo,kinesiska mat,rekomenderat">
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
     <link rel="stylesheet" type="text/css" href="../style/calendar.css">
     <!-- google symbols -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -53,11 +53,6 @@
 
         <main class="booking">
             <div class="left">
-                <!-- <picture>
-                    <source srcset="/img/openrice001-large-800.jpg" media="(min-width: 800px)">
-                    <source srcset="/img/openrice001-middle-450.jpg" media="(min-width: 450px)">
-                    <img src="/img/openrice001-small.jpg" alt="Open Rice description image">
-                </picture> -->
                 <div class="small-head-img">
                     <picture>
                         <source srcset="../img/img001-600.jpg" media="(min-width: 600px)">
@@ -194,31 +189,33 @@
 
         <div class="footer">
             <div class="footer-grid-item">
-                <h4>&copy;2023 Open Rice Restaurang AB<br>
+                <h4 style="line-height: 180%;">&copy;2023 Open Rice Restaurang AB<br>
                     All Rights Reserved </h4>
                 <p>Organisationsnummer: 5569992711</p>
             </div>
             <div class="footer-grid-item">
-                <span class="material-symbols-outlined">domain_add</span>
-                <p><a style="cursor: pointer;" onclick="myNavFunc()">Östra Tullgatan 5, 211 28 Malmö</a></p>
+                <div class="line-in-grid">
+                    <span class="material-symbols-outlined">domain_add</span>
+                    <p><a style="cursor: pointer;" onclick="myNavFunc()">Östra Tullgatan 5, 211 28 Malmö</a></p>
+                    </div>
+                <div class="line-in-grid">
+                    <span class="material-symbols-outlined">mail</span>
+                    <p><a class="footer-tel-mail" href="mailto:amy.cai.j@hotmail.com">amy.cai.j@hotmail.com</a></p>
+                </div>
+                <div class="line-in-grid">
+                    <span class="material-symbols-outlined">call </span>
+                    <p><a class="footer-tel-mail" href="tel:+73 788 05 26"> 073-788 05 26</a></p>
+                </div>
+                <div class="line-in-grid">
+                    <a target="_blank" title="Facebook" href="https://www.facebook.com/open.rice.restaurang/?locale=sv_SE"><img src="../icon/facebook-48_48.png" alt="Facebook" width="30px" height="30px"></a>
+                    <a target="_blank" title="Reviews" href="https://www.facebook.com/open.rice.restaurang/reviews?locale=sv_SE"><img src="../icon/greenstar_128-128.png" alt="Reviews" width="30px" height="30px"></a>
+                    </div>
             </div>
             <div class="footer-grid-item">
-                <span class="material-symbols-outlined">mail</span>
-                <p><a class="footer-tel-mail" href="mailto:amy.cai.j@hotmail.com">amy.cai.j@hotmail.com</a></p>
-            </div>
-            <div class="footer-grid-item">
-                <span class="material-symbols-outlined">call </span>
-                <p><a class="footer-tel-mail" href="tel:+73 788 05 26"> 073-788 05 26</a></p>
-            </div>
-            <div class="footer-grid-item">
-                <a target="_blank" title="Facebook" href="https://www.facebook.com/open.rice.restaurang/?locale=sv_SE"><img src="../icon/facebook-48_48.png" alt="Facebook" width="30px" height="30px"></a>
-                <a target="_blank" title="Reviews" href="https://www.facebook.com/open.rice.restaurang/reviews?locale=sv_SE"><img src="../icon/greenstar_128-128.png" alt="Facebook" width="30px" height="30px"></a>
-            </div>
-            <div class="footer-grid-item">
-                <h2>Öppettider</h2>
-                <p>Måndag - Fredag 11:15 - 20:00</p>
-                <p>Lördag 13:00 - 20:00</p>
-                <p>Söndag Stängt</p>
+                <h2>Open times</h2>
+                <p>Monday - Friday 11:15 - 20:00</p>
+                <p>Saturday 13:00 - 20:00</p>
+                <p>Sunday Closed</p>
             </div>
         </div>
     </div>
