@@ -71,7 +71,7 @@ h1 {
     /* 没有content设定时图片不显示 */
     content: '';
     position: absolute;
-    background: transparent url('/img/bkground1-600.jpg') center center no-repeat;
+    background: transparent url('./img/bkground1-600.jpg') center center no-repeat;
     filter: blur(8px);
     /*图片置于最后端*/
     z-index: -1;
@@ -638,6 +638,6 @@ div.right .calendar {
     }
 
     .book-table::after {
-        background: transparent url('/img/bkground1-414.jpg') center center no-repeat;
+        background: transparent url('./img/bkground1-414.jpg') center center no-repeat;
     }
 }
