@@ -692,4 +692,8 @@ div.right .calendar {
         row-gap: 5vh;
         /* grid-template-columns: 100%; */
     }
+
+    .minus-box, .plus-box {
+        width: 20%;
+    }
 }
