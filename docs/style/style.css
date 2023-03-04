@@ -109,6 +109,13 @@ h1 {
     box-shadow: var(--main-box-shadow);
 }
 
+ div.desc-block {
+     width: 100%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ }
+ 
 .desc {
     width: 40%;
     justify-content: space-around;
@@ -124,7 +131,7 @@ h1 {
 
 .desc-img {
     width: 100%;
-    height: 50%vh;
+    /* height: 50%vh; */
     overflow: hidden;
 }
 
@@ -252,14 +259,13 @@ a:hover {
     grid-template-rows: 100%;
     grid-template-columns: 30% 30% 30%;
     display: grid;
-    /* margin-left: 5vw; */
     justify-content: space-between;
     align-items: center;
     padding: var(--small-padding);
 }
 
 .footer-grid-item {
-    width: 100%;
+    /* width: 100%; */
     font-family: var(--main-font-family);
     display: flex;
     flex-direction: column;
@@ -269,7 +275,7 @@ a:hover {
 
 .line-in-grid {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     display: flex;
     row-gap: 1vh;
     column-gap: 1vw;
@@ -412,7 +418,7 @@ main.booking {
 
 div.left {
     width: 30%;
-    height: 50vh;
+    height: 30vh;
     display: flex;
     flex-direction: column;
 }
@@ -585,7 +591,6 @@ div.right .calendar {
 /*****************************************
   Media queries for various screens
 *****************************************/
-
 /* For small screen: */
 @media only screen and (max-width:768px) {
     /* main page description area */
@@ -607,6 +612,22 @@ div.right .calendar {
         flex-wrap: wrap;
     }
 
+    .booking-table {
+        height: 75vh;
+    }
+
+    div.desc-block {
+        flex-direction: column;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 5vh;
+    }
+
+    
     :root {
         /* normal font setting */
         --main-font-size: 5vw;
@@ -630,12 +651,6 @@ div.right .calendar {
         width: 90%;
     }
 
-    div.footer-left,
-    div.footer-middle,
-    div.footer-right {
-        width: 100%;
-    }
-
     :root {
         /* normal font setting */
         --main-font-size: 5vw;
@@ -645,8 +660,8 @@ div.right .calendar {
         --nav-font-size: 6vw;
     }
 
-        /* main page, "book a table" button */
-        .booking-table button {
+    /* main page, "book a table" button */
+    .booking-table button {
         width: 50vw;
         height: 10vw;
     }
@@ -658,13 +673,11 @@ div.right .calendar {
     }
 
     div.left {
-        /* width: 30%; */
         height: 30vh;
     }
 
     /* navigation bar */
     .topnav {
-        /* width: 80%; */
         flex-direction: column;
         justify-content: left;
         flex-wrap: wrap;
@@ -673,11 +686,10 @@ div.right .calendar {
     .nav-right {
         width: 100%;
         justify-content: space-around;
-        /* row-gap: vw; */
     }
 
     .booking-table {
-        height: 50vh;
+        height: 40vh;
     }
 
     .booking-table::after {
@@ -685,15 +697,16 @@ div.right .calendar {
         filter: blur(2px);
     }
 
-    .footer {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 5vh;
-        /* grid-template-columns: 100%; */
-    }
-
     .minus-box, .plus-box {
         width: 20%;
     }
+}
+
+/* For mobile iPhoneSE,iphone8: */
+@media only screen and (max-width:375px) {
+
+    .booking-table {
+        height: 42vh;
+    }
+
 }
