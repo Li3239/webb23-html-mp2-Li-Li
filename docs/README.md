@@ -5,3 +5,4 @@
 # 2. Menu page
 # 3. Booking page
 #
+# Nu varande hemsidan: https://openrice.se
